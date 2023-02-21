@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-
+interface IanimalList {
+ id : number; 
+  name : string;
+ fed : boolean
+}
 @Component({
   selector: 'app-zoo',
   templateUrl: './zoo.component.html',
   styleUrls: ['./zoo.component.css']
 })
 export class ZooComponent implements OnInit {
-  animalList: object[] = [];
+  animalList: IanimalList[] = [];
 
   constructor() { }
 
