@@ -1,2 +1,2 @@
 <h1>List of animals</h1>
-<app-zoo-animal *ngFor="let animal of animalList" [animal]="animal"></app-zoo-animal>
+<app-zoo-animal *ngFor="let animal of animalList" [animal]="animal" (like)="onlike(animal)"></app-zoo-animal>

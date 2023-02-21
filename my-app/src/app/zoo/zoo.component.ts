@@ -33,5 +33,8 @@ this.animalList = [
   }
 ]
   }
+  onlike(animal:any): void{
+    window.alert(`I like the ${animal.name}`!);
+  }
 
 };
