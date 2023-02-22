@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ZooService } from '../zoo.service';
+
 interface IanimalList {
  id : number; 
   name : string;
@@ -12,26 +14,10 @@ interface IanimalList {
 export class ZooComponent implements OnInit {
   animalList: IanimalList[] = [];
 
-  constructor() { }
+  constructor(private zooService: ZooService) { }
 
 ngOnInit(): void {
-this.animalList = [
-  {
-    id: 1,
-    name: 'Panda',
-    fed: true
-  },
-  {
-    id: 2,
-    name: 'Elephant',
-    fed: true
-  },
-  {
-    id: 3,
-    name: 'Lion',
-    fed: false
-  }
-]
+this.animalList = this.zooService.getAnimals();
   }
   onlike(animal:any): void{
     window.alert(`I like the ${animal.name}`!);
