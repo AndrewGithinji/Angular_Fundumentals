@@ -1,2 +1,4 @@
 <h1>List of animals</h1>
-<app-zoo-animal *ngFor="let animal of animalList" [animal]="animal" (like)="onlike(animal)"></app-zoo-animal>
+<div fxLayout="row-reverse" fxLayoutAlign="centre">
+    <app-zoo-animal fxFlexOffset="15%" *ngFor="let animal of animalList" [animal]="animal" (like)="onlike(animal)"></app-zoo-animal>
+</div>
