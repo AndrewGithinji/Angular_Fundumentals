@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { RecipeComponent } from './recipe/recipe.component';
 import { ZooComponent } from './zoo/zoo.component';
 import { ZooAnimalComponent } from './zoo-animal/zoo-animal.component';
 import { LinksComponent } from './links/links.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { LinksComponent } from './links/links.component';
     RecipeComponent,
     ZooComponent,
     ZooAnimalComponent,
-    LinksComponent
+    LinksComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
